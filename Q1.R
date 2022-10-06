@@ -25,8 +25,8 @@
 #   The two locations are in the same bin iff x1ind == x2ind AND y1ind == y2ind, 
 #
 #
-#   Compute the mean loss of buildings in every 5km x 5km bin that contains at 
-#   least one building. Then print the standard deviation of these mean losses.
+#   Compute the mean of building losses in every 5km x 5km bin that is not 
+#   empty, then print the standard deviation of these mean losses.
 ################################################################################
 
 
