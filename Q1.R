@@ -22,11 +22,11 @@
 #       x2ind = as.integer( ( x2 - (-180) ) / (d / 120) )
 #       y2ind = as.integer( ( y2 - ( -90) ) / (d / 120) )
 #
-#   The two locations are in the same bin iff x1ind == x2ind AND y1ind == y2ind, 
+#   The two locations are in the same bin IFF x1ind == x2ind AND y1ind == y2ind, 
 #
 #
 #   Compute the mean of building losses in every 5km x 5km bin that is not 
-#   empty, then print the standard deviation of these mean losses.
+#   empty, then print the standard deviation of these means.
 ################################################################################
 
 
