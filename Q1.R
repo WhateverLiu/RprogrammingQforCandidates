@@ -14,7 +14,7 @@
 #
 #   
 #   To decide if two geocoordinates (x1, y1), (x2, y2) are in the same 
-#   `d`km x `d`km bin, we compare the bin indices of the two locations:
+#   `d`km x `d`km bin, we can compare the bin indices of the two locations:
 #
 #       x1ind = as.integer( ( x1 - (-180) ) / (d / 120) )
 #       y1ind = as.integer( ( y1 - ( -90) ) / (d / 120) )
@@ -22,11 +22,11 @@
 #       x2ind = as.integer( ( x2 - (-180) ) / (d / 120) )
 #       y2ind = as.integer( ( y2 - ( -90) ) / (d / 120) )
 #
-#   If x1ind == x2ind AND y1ind == y2ind, the two locations are in the same bin.
+#   The two locations are in the same bin iff x1ind == x2ind AND y1ind == y2ind, 
 #
 #
-#   Compute the mean loss of every 5km x 5km bin that contains at least one 
-#   building. Report the standard deviation of these means.
+#   Compute the mean loss of buildings in every 5km x 5km bin that contains at 
+#   least one building. Then print the standard deviation of these mean losses.
 ################################################################################
 
 
@@ -34,8 +34,8 @@
 # Data generation. Please do not change the code.
 # ==============================================================================
 set.seed(123)
-locationLoss = data.frame(longitude = runif( 10000, 71.0589 - 1, 71.0589 + 1),
-                          latitude  = runif( 10000, 42.3601 - 1, 42.3601 + 1),
+locationLoss = data.frame(longitude = runif (10000, 71.0589 - 1, 71.0589 + 1),
+                          latitude  = runif (10000, 42.3601 - 1, 42.3601 + 1),
                           loss      = rgamma(10000, shape = 2, scale = 2) * 1e6)
 
 
